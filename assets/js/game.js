@@ -64,7 +64,7 @@ getNewQuestion = () => {
     if (availableQuesions.length === 0 || questionCounter >= MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score);
         // go to the end page
-        return window.location.assign('/another-genius-at-geography-quiz/end.html');
+        return window.location.assign('gracietedev.github.io/another-genius-at-geography-quiz/end.html');
     }
     questionCounter++;
     progressText.innerText = `Question ${questionCounter}/${MAX_QUESTIONS}`;
