@@ -10,15 +10,17 @@
   
   .choice-container:hover {
     cursor: pointer;
-    box-shadow: 0 0.4rem 1.4rem 0.3rem rgba(255, 255, 255, 0.5);
+    box-shadow: 0 0.7rem 1.4rem 0.7rem rgba(255, 255, 255, 0.7);
     transform: translateY(-0.1rem);
     transition: transform 150ms;
   }
   
   .choice-prefix {
     padding: 1.5rem 2.5rem;
-    background-color: #3a2e17;
+    background-color: #e9ac8a;
     color: white;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.7rem 1.4rem 0.7rem rgba(255, 255, 255, 0.7);
   }
   
   .div {
