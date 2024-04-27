@@ -160,12 +160,12 @@ li {
   color: #ffffff;
   background-color: rgb(71, 35, 35);
   border-radius: 4px;
-  box-shadow: 4px 4px rgb(71, 35, 35);
+  box-shadow: 1px 3px rgb(255, 253, 253, 0.02);
 }
 
 .btn:hover {
   cursor: pointer;
-  box-shadow: 0 0.4rem 1.4rem 0 rgba(255, 255, 255, 0.836);
+  box-shadow: 0 0.5rem 1.5rem 0 rgba(255, 255, 255, 0.850);
   transform: translateY(-0.1rem);
   transition: transform 150ms;
 }

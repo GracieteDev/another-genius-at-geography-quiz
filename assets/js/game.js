@@ -29,21 +29,21 @@ fetch(
     .then((loadedQuestions) => {
         questions = loadedQuestions.results.map((loadedQuestion) => {
             const formattedQuestion = {
-                question: loadedQuestion.question,
+                question: decodeHtml(loadedQuestion.question),  // Call decodeHtml here
             };
-
+    
             const answerChoices = [...loadedQuestion.incorrect_answers];
             formattedQuestion.answer = Math.floor(Math.random() * 4) + 1;
             answerChoices.splice(
                 formattedQuestion.answer - 1,
                 0,
-                loadedQuestion.correct_answer
+                decodeHtml(loadedQuestion.correct_answer)  // Call decodeHtml here
             );
-
+    
             answerChoices.forEach((choice, index) => {
-                formattedQuestion['choice' + (index + 1)] = choice;
+                formattedQuestion['choice' + (index + 1)] = decodeHtml(choice);  // Call decodeHtml here
             });
-
+    
             return formattedQuestion;
         });
         
@@ -80,11 +80,11 @@ getNewQuestion = () => {
 
     const questionIndex = Math.floor(Math.random() * availableQuesions.length);
     currentQuestion = availableQuesions[questionIndex];
-    question.innerText = currentQuestion.question;
+    question.innerText = decodeHtml(currentQuestion.question);  // Call decodeHtml here
 
     choices.forEach((choice) => {
         const number = choice.dataset['number'];
-        choice.innerText = currentQuestion['choice' + number];
+        choice.innerText = decodeHtml(currentQuestion['choice' + number]);  // Call decodeHtml here
     });
 
     availableQuesions.splice(questionIndex, 1);
